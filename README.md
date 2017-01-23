@@ -4,7 +4,7 @@
 
 ### Background
 
-Some of my fondest memories of my child hood was playing "The Lost Mind of Dr. Brain" this was a collection of puzzles you had to solve to win the game. One of my favorite puzzles was motor programming. In this puzzle you preset a few commands and then run the "program", the character  moves through a grid picking of the brain and avoiding bugs. An example of the mini game can be found here [Motor Programming][youtube].
+Some of my fondest memories from my childhood were while playing "The Lost Mind of Dr. Brain". This computer game is a collection of puzzles you had to solve in order to win. One of my favorite puzzles was motor programming. In this puzzle the player would preset a few commands and then run the "program", the character  moves through a grid picking up the brain and avoiding bugs. An example of the mini game can be found here [Motor Programming][youtube].
 
 [youtube]: https://www.youtube.com/watch?v=xqDGPYMcWGk&t=583s
 
@@ -18,7 +18,7 @@ Some of my fondest memories of my child hood was playing "The Lost Mind of Dr. B
 
 ### Wireframe
 
-The game will consist of 4 main components the map the movement drop downs the run switch and the information area including title credit and links to my linkedin and github pages.
+The game will consist of 4 main components, the map, the movement drop downs, the run switch, and the information area including title credit and links to my linkedin and github pages.
 
 ![wireframe](images/motor-programming.png)
 
@@ -33,26 +33,27 @@ The game will consist of 4 main components the map the movement drop downs the r
 
 **Day 1**:
 
-- setup file structure.
-- build inputs and test functionality with console logs.
-- play with canvas to figure out its use.
+- Setup file structure.
+- Build inputs and test functionality with console logs.
+- Play with canvas to figure out its use.
 
 **Day 2**
 
-- work out movements and other actions and how they interact with the environment.
-- add images to the different pieces.
+- Work out movements and other actions and how they interact with the environment.
+- Add images to the different pieces.
 
 **Day 3**
 
-- build out puzzles and test functionality.
+- Build out puzzles and test functionality.
 
 **Day 4**
 
-- styling and resolve any issues that have cone to the surface.
+- Styling
+- Resolve any issues that have cone to the surface.
 
 
 ### Bonus features
 
 - [ ] More maps
-- [ ] a subroutine
-- [ ] extra visual embellishment 
+- [ ] A subroutine
+- [ ] Extra visual embellishment 
