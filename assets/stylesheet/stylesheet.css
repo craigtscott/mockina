@@ -1,8 +1,74 @@
+.inputs {
+  display: flex;
+  flex-direction: row;
+
+  border: red 10px solid;
+}
+
 .moves {
   background-color: red;
   display: inline-block;
 }
 
-.sub1 {
+.sub {
   display: inline-block;
+  background-color: red;
+}
+.body {
+  font-family: 'VT323', monospace;
+  background-image: url("../banner.jpg");
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.controlls {
+  display: flex;
+  flex-direction: row;
+  padding-top: 10px;
+}
+
+canvas {
+border: red 10px solid;
+}
+
+.div{
+  display: flex;
+  align-items: center;
+  background-color: red;
+}
+
+h1{
+  font-size: 36px;
+  border: red 10px solid;
+  background-color: red;
+  align-items: center;
+  transform: rotate(-90deg);
+  display: flex;
+
+}
+
+select {
+  border: green 2px solid;
+  border-radius: 0px;
+  height: 25px;
+  width: 100px;
+  color: green;
+  background-color: black;
+  align-items: center;
+}
+
+select:hover {
+  color: black;
+  background-color: green;
+  border: black 2px solid;
+}
+
+button {
+  font-family: 'VT323', monospace;
+  font-size: 36px;
+  width: 120px;
+  background-color: green;
+  margin: 10px;
 }
