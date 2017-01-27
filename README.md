@@ -1,6 +1,6 @@
 # Project Proposal
 
-## Motor Programming
+## Mockina
 
 ### Background
 
