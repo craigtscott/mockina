@@ -26,7 +26,7 @@ class Inputs extends React.Component {
     let element6 = document.getElementById('move6');
     element6.value = "sub1";
     let element7 = document.getElementById('move7');
-    element7.value = "sub1";
+    element7.value = "wait";
     let element8 = document.getElementById('sub0');
     element8.value = "move";
     let element9 = document.getElementById('sub1');
@@ -115,7 +115,7 @@ class Inputs extends React.Component {
               <option value="sub1" >sub 1</option>
           </select>
         </div>
-<div className="div"><h1>sub 1</h1></div>
+<div className="div"><h1>subroutine</h1></div>
         <div className="sub">
           <select  id="sub0">
               <option value="wait" >wait</option>
