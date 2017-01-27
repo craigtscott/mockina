@@ -18,11 +18,60 @@
   font-family: 'VT323', monospace;
   background-image: url("../banner.jpg");
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
 }
 
+.one {
+  height: 100%;
+  display: flex;
+ flex-direction: column;
+ align-items: baseline;
+}
+
+.oneDiv {
+  padding: 0px 5px 0px 10px;
+  background-color: red;
+    margin-top: 25px;
+}
+
+.title {
+  margin-top: 80px;
+  font-size: 50px;
+  /*display: none;*/
+}
+p {
+  background-color: red;
+  color: white;
+  font-size: 18px;
+}
+
+.two {
+  position: fixed;
+    /* center the element */
+    right: 0;
+    left: 0;
+    margin-right: auto;
+    margin-left: auto;
+    /* give it dimensions */
+    width: 640px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+.three {
+  height: 100%;
+
+}
+
+.name{
+  margin-top: 212px;
+  transform: rotate(90deg);
+  font-size: 50px;
+  /*display: none;*/
+}
 .controlls {
   display: flex;
   flex-direction: row;
@@ -40,7 +89,8 @@ border: red 10px solid;
 }
 
 h1{
-  font-size: 36px;
+  color: white;
+  font-size: 27px;
   border: red 10px solid;
   background-color: red;
   align-items: center;
@@ -66,6 +116,7 @@ select:hover {
 }
 
 button {
+  color: black;
   font-family: 'VT323', monospace;
   font-size: 36px;
   width: 120px;

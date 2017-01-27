@@ -3,46 +3,51 @@ import React from 'react';
 class Inputs extends React.Component {
   constructor(){
     super();
-    };
+    this.text = "Start";
+    this.demo = this.demo.bind(this);
+  };
 
+
+
+  demo() {
+    // debugger;
+    let element0 = document.getElementById('move0');
+    element0.value = "move";
+    let element1 = document.getElementById('move1');
+    element1.value = "pick";
+    let element2 = document.getElementById('move2');
+    element2.value = "move";
+    let element3 = document.getElementById('move3');
+    element3.value = "pick";
+    let element4 = document.getElementById('move4');
+    element4.value = "right";
+    let element5 = document.getElementById('move5');
+    element5.value = "sub1";
+    let element6 = document.getElementById('move6');
+    element6.value = "sub1";
+    let element7 = document.getElementById('move7');
+    element7.value = "sub1";
+    let element8 = document.getElementById('sub0');
+    element8.value = "move";
+    let element9 = document.getElementById('sub1');
+    element9.value = "pick";
+    let element10 = document.getElementById('sub2');
+    element10.value = "move";
+    let element11 = document.getElementById('sub3');
+    element11.value = "pick";
+    let element12 = document.getElementById('sub4');
+    element12.value = "move";
+    let element13 = document.getElementById('sub5');
+    element13.value = "pick";
+    let element14 = document.getElementById('sub6');
+    element14.value = "move";
+    let element15 = document.getElementById('sub7');
+    element15.value = "left";
+  };
   render(){
-    let demoz = "false";
-    document.getElementById("demo").addEventListener("click", () => {
-      let element0 = document.getElementById('move0');
-      element0.value = "move";
-      let element1 = document.getElementById('move1');
-      element1.value = "pick";
-      let element2 = document.getElementById('move2');
-      element2.value = "move";
-      let element3 = document.getElementById('move3');
-      element3.value = "pick";
-      let element4 = document.getElementById('move4');
-      element4.value = "right";
-      let element5 = document.getElementById('move5');
-      element5.value = "sub1";
-      let element6 = document.getElementById('move6');
-      element6.value = "sub1";
-      let element7 = document.getElementById('move7');
-      element7.value = "sub1";
-      let element8 = document.getElementById('sub0');
-      element8.value = "move";
-      let element9 = document.getElementById('sub1');
-      element9.value = "pick";
-      let element10 = document.getElementById('sub2');
-      element10.value = "move";
-      let element11 = document.getElementById('sub3');
-      element11.value = "pick";
-      let element12 = document.getElementById('sub4');
-      element12.value = "move";
-      let element13 = document.getElementById('sub5');
-      element13.value = "pick";
-      let element14 = document.getElementById('sub6');
-      element14.value = "move";
-      let element15 = document.getElementById('sub7');
-      element15.value = "left";
-    });
     return(
       <div id="inputs" className="inputs">
+        <button id="start" >Start</button>
         <div className="div"><h1>main</h1></div>
         <div className="moves">
           <select  id="move0" >
@@ -169,6 +174,7 @@ class Inputs extends React.Component {
               <option value="pick" >pick up</option>
           </select>
         </div>
+        <button onClick={this.demo} id="demo">Demo</button>
       </div>
 );}
 
