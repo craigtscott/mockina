@@ -56,7 +56,7 @@ class Inputs extends React.Component {
               <option value="left" >turn left</option>
               <option value="right" >turn right</option>
               <option value="pick" >pick up</option>
-              <option value="sub1" >sub 1</option>
+              <option value="sub1" >subroutine</option>
           </select><br />
           <select  id="move1">
               <option value="wait" >wait</option>
@@ -64,7 +64,7 @@ class Inputs extends React.Component {
               <option value="left" >turn left</option>
               <option value="right" >turn right</option>
               <option value="pick" >pick up</option>
-              <option value="sub1" >sub 1</option>
+              <option value="sub1" >subroutine</option>
           </select><br />
           <select  id="move2">
               <option value="wait" >wait</option>
@@ -72,7 +72,7 @@ class Inputs extends React.Component {
               <option value="left" >turn left</option>
               <option value="right" >turn right</option>
               <option value="pick" >pick up</option>
-              <option value="sub1" >sub 1</option>
+              <option value="sub1" >subroutine</option>
           </select><br />
           <select  id="move3">
               <option value="wait" >wait</option>
@@ -80,7 +80,7 @@ class Inputs extends React.Component {
               <option value="left" >turn left</option>
               <option value="right" >turn right</option>
               <option value="pick" >pick up</option>
-              <option value="sub1" >sub 1</option>
+              <option value="sub1" >subroutine</option>
           </select><br />
           <select  id="move4">
               <option value="wait" >wait</option>
@@ -88,7 +88,7 @@ class Inputs extends React.Component {
               <option value="left" >turn left</option>
               <option value="right" >turn right</option>
               <option value="pick" >pick up</option>
-              <option value="sub1" >sub 1</option>
+              <option value="sub1" >subroutine</option>
           </select><br />
           <select  id="move5">
               <option value="wait" >wait</option>
@@ -96,7 +96,7 @@ class Inputs extends React.Component {
               <option value="left" >turn left</option>
               <option value="right" >turn right</option>
               <option value="pick" >pick up</option>
-              <option value="sub1" >sub 1</option>
+              <option value="sub1" >subroutine</option>
           </select><br />
           <select  id="move6">
               <option value="wait" >wait</option>
@@ -104,7 +104,7 @@ class Inputs extends React.Component {
               <option value="left" >turn left</option>
               <option value="right" >turn right</option>
               <option value="pick" >pick up</option>
-              <option value="sub1" >sub 1</option>
+              <option value="sub1" >subroutine</option>
           </select><br />
           <select  id="move7">
               <option value="wait" >wait</option>
@@ -112,7 +112,7 @@ class Inputs extends React.Component {
               <option value="left" >turn left</option>
               <option value="right" >turn right</option>
               <option value="pick" >pick up</option>
-              <option value="sub1" >sub 1</option>
+              <option value="sub1" >subroutine</option>
           </select>
         </div>
 <div className="div"><h1>subroutine</h1></div>

@@ -124,3 +124,7 @@ button {
   background-color: green;
   margin: 10px;
 }
+
+.fa {
+  transform: rotate(-90deg);
+}
