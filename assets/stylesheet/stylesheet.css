@@ -116,6 +116,14 @@ select:hover {
   border: black 2px solid;
 }
 
+.red {
+  color: red;
+  background-color: green;
+  border: black 2px solid;
+}
+
+
+
 button {
   color: black;
   font-family: 'VT323', monospace;

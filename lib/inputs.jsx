@@ -116,56 +116,56 @@ class Inputs extends React.Component {
         </div>
 <div className="div"><h1>subroutine</h1></div>
         <div className="sub">
-          <select  id="sub0" className="subs0">
+          <select  id="sub0" className="sub0">
               <option value="wait" >wait</option>
               <option value="move" >move</option>
               <option value="left" >turn left</option>
               <option value="right" >turn right</option>
               <option value="pick" >pick up</option>
           </select><br />
-        <select  id="sub1" className="subs1">
+        <select  id="sub1" className="sub1">
               <option value="wait" >wait</option>
               <option value="move" >move</option>
               <option value="left" >turn left</option>
               <option value="right" >turn right</option>
               <option value="pick" >pick up</option>
           </select><br />
-        <select  id="sub2" className="subs2">
+        <select  id="sub2" className="sub2">
               <option value="wait" >wait</option>
               <option value="move" >move</option>
               <option value="left" >turn left</option>
               <option value="right" >turn right</option>
               <option value="pick" >pick up</option>
           </select><br />
-        <select  id="sub3" className="subs3">
+        <select  id="sub3" className="sub3">
               <option value="wait" >wait</option>
               <option value="move" >move</option>
               <option value="left" >turn left</option>
               <option value="right" >turn right</option>
               <option value="pick" >pick up</option>
           </select><br />
-        <select  id="sub4" className="subs4">
+        <select  id="sub4" className="sub4">
               <option value="wait" >wait</option>
               <option value="move" >move</option>
               <option value="left" >turn left</option>
               <option value="right" >turn right</option>
               <option value="pick" >pick up</option>
           </select><br />
-        <select  id="sub5" className="subs5">
+        <select  id="sub5" className="sub5">
               <option value="wait" >wait</option>
               <option value="move" >move</option>
               <option value="left" >turn left</option>
               <option value="right" >turn right</option>
               <option value="pick" >pick up</option>
           </select><br />
-        <select  id="sub6" className="subs6">
+        <select  id="sub6" className="sub6">
               <option value="wait" >wait</option>
               <option value="move" >move</option>
               <option value="left" >turn left</option>
               <option value="right" >turn right</option>
               <option value="pick" >pick up</option>
           </select><br />
-        <select  id="sub7" className="subs7">
+        <select  id="sub7" className="sub7">
               <option value="wait" >wait</option>
               <option value="move" >move</option>
               <option value="left" >turn left</option>
