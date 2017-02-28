@@ -10,7 +10,6 @@ class Inputs extends React.Component {
 
 
   demo() {
-    // debugger;
     let element0 = document.getElementById('move0');
     element0.value = "move";
     let element1 = document.getElementById('move1');
@@ -50,7 +49,7 @@ class Inputs extends React.Component {
         <button id="start" >Start</button>
         <div className="div"><h1>main</h1></div>
         <div className="moves">
-          <select  id="move0" >
+          <select  id="move0" className="move0">
               <option value="wait" >wait</option>
               <option value="move" >move</option>
               <option value="left" >turn left</option>
@@ -58,7 +57,7 @@ class Inputs extends React.Component {
               <option value="pick" >pick up</option>
               <option value="sub1" >subroutine</option>
           </select><br />
-          <select  id="move1">
+          <select  id="move1" className="move1">
               <option value="wait" >wait</option>
               <option value="move" >move</option>
               <option value="left" >turn left</option>
@@ -66,7 +65,7 @@ class Inputs extends React.Component {
               <option value="pick" >pick up</option>
               <option value="sub1" >subroutine</option>
           </select><br />
-          <select  id="move2">
+          <select  id="move2" className="move2">
               <option value="wait" >wait</option>
               <option value="move" >move</option>
               <option value="left" >turn left</option>
@@ -74,7 +73,7 @@ class Inputs extends React.Component {
               <option value="pick" >pick up</option>
               <option value="sub1" >subroutine</option>
           </select><br />
-          <select  id="move3">
+          <select  id="move3" className="move3">
               <option value="wait" >wait</option>
               <option value="move" >move</option>
               <option value="left" >turn left</option>
@@ -82,7 +81,7 @@ class Inputs extends React.Component {
               <option value="pick" >pick up</option>
               <option value="sub1" >subroutine</option>
           </select><br />
-          <select  id="move4">
+          <select  id="move4" className="move4">
               <option value="wait" >wait</option>
               <option value="move" >move</option>
               <option value="left" >turn left</option>
@@ -90,7 +89,7 @@ class Inputs extends React.Component {
               <option value="pick" >pick up</option>
               <option value="sub1" >subroutine</option>
           </select><br />
-          <select  id="move5">
+          <select  id="move5" className="move5">
               <option value="wait" >wait</option>
               <option value="move" >move</option>
               <option value="left" >turn left</option>
@@ -98,7 +97,7 @@ class Inputs extends React.Component {
               <option value="pick" >pick up</option>
               <option value="sub1" >subroutine</option>
           </select><br />
-          <select  id="move6">
+          <select  id="move6" className="move6">
               <option value="wait" >wait</option>
               <option value="move" >move</option>
               <option value="left" >turn left</option>
@@ -106,7 +105,7 @@ class Inputs extends React.Component {
               <option value="pick" >pick up</option>
               <option value="sub1" >subroutine</option>
           </select><br />
-          <select  id="move7">
+          <select  id="move7" className="move7">
               <option value="wait" >wait</option>
               <option value="move" >move</option>
               <option value="left" >turn left</option>
@@ -117,56 +116,56 @@ class Inputs extends React.Component {
         </div>
 <div className="div"><h1>subroutine</h1></div>
         <div className="sub">
-          <select  id="sub0">
+          <select  id="sub0" className="subs0">
               <option value="wait" >wait</option>
               <option value="move" >move</option>
               <option value="left" >turn left</option>
               <option value="right" >turn right</option>
               <option value="pick" >pick up</option>
           </select><br />
-          <select  id="sub1">
+        <select  id="sub1" className="subs1">
               <option value="wait" >wait</option>
               <option value="move" >move</option>
               <option value="left" >turn left</option>
               <option value="right" >turn right</option>
               <option value="pick" >pick up</option>
           </select><br />
-          <select  id="sub2">
+        <select  id="sub2" className="subs2">
               <option value="wait" >wait</option>
               <option value="move" >move</option>
               <option value="left" >turn left</option>
               <option value="right" >turn right</option>
               <option value="pick" >pick up</option>
           </select><br />
-          <select  id="sub3">
+        <select  id="sub3" className="subs3">
               <option value="wait" >wait</option>
               <option value="move" >move</option>
               <option value="left" >turn left</option>
               <option value="right" >turn right</option>
               <option value="pick" >pick up</option>
           </select><br />
-          <select  id="sub4">
+        <select  id="sub4" className="subs4">
               <option value="wait" >wait</option>
               <option value="move" >move</option>
               <option value="left" >turn left</option>
               <option value="right" >turn right</option>
               <option value="pick" >pick up</option>
           </select><br />
-          <select  id="sub5">
+        <select  id="sub5" className="subs5">
               <option value="wait" >wait</option>
               <option value="move" >move</option>
               <option value="left" >turn left</option>
               <option value="right" >turn right</option>
               <option value="pick" >pick up</option>
           </select><br />
-          <select  id="sub6">
+        <select  id="sub6" className="subs6">
               <option value="wait" >wait</option>
               <option value="move" >move</option>
               <option value="left" >turn left</option>
               <option value="right" >turn right</option>
               <option value="pick" >pick up</option>
           </select><br />
-          <select  id="sub7">
+        <select  id="sub7" className="subs7">
               <option value="wait" >wait</option>
               <option value="move" >move</option>
               <option value="left" >turn left</option>
