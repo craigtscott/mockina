@@ -31,10 +31,6 @@ class HowTo extends React.Component {
       return (
         <div id="howto">
           <div>
-            <p> Make the robot pick up 8 or more batteries </p>
-            <p> You can run a subroutine from the main </p>
-            <p> Protip dont forget to pick up </p>
-            <p> Press demo to get one of the solutions </p>
           </div>
           <button onClick={this.openModal}>How to Play</button>
           <Modal
@@ -43,6 +39,10 @@ class HowTo extends React.Component {
             onRequestClose={this.closeModal}
             contentLabel="Example Modal"
           >
+          <p> Make the robot pick up 8 or more batteries </p>
+          <p> You can run a subroutine from the main </p>
+          <p> Protip dont forget to pick up </p>
+          <p> Press demo to get one of the solutions </p>
           </Modal>
         </div>
 

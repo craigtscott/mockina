@@ -1,5 +1,5 @@
 import React from 'react';
-
+import FontAwesome from 'react-fontawesome';
 
 class Name extends React.Component {
   constructor(){
@@ -8,12 +8,12 @@ class Name extends React.Component {
 };
   render() {
     return(
-      <h1 class="name">by Craig Scott  &nbsp;
+      <h1 className='name'>by Craig Scott&nbsp;
       <a href="https://github.com/craigtscott/mockina">
-      <i class="fa fa-github" aria-hidden="true"></i>
+        <i className="fa fa-github" aria-hidden="true"></i>
       </a> &nbsp;
       <a href="https://www.linkedin.com/in/craigtscott">
-      <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+        <i className="fa fa-linkedin-square" aria-hidden="true"></i>
       </a>
       </h1>
     );
