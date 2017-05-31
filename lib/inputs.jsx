@@ -5,21 +5,10 @@ class Inputs extends React.Component {
     super();
 
     this.state = {
-    level: "level1"
     };
 
     this.demo = this.demo.bind(this);
-      this.handleLevelChange = this.handleLevelChange.bind(this);
-  };
-
-  handleLevelChange(changeEvent){
-    this.setState({level: changeEvent.target.value});
-    console.log(this.state.level);
-  }
-
-
-
-
+    };
 
   demo() {
     let element0 = document.getElementById('move0');
@@ -57,35 +46,6 @@ class Inputs extends React.Component {
   };
   render(){
     return(
-
-      // <div id="levels" className="levels">
-      //   <form>
-      //     <div className="radio">
-      //       <lable>
-      //         <input type="radio" value= "level1"
-      //           checked={this.state.level === "level1"}
-      //           onChange={this.handleLevelChange} />
-      //         1
-      //       </lable>
-      //     </div>
-      //     <div className="radio">
-      //       <lable>
-      //         <input type="radio" value= "level2"
-      //           checked={this.state.level === "level2"}
-      //           onChange={this.handleLevelChange} />
-      //         "2"
-      //       </lable>
-      //     </div>
-      //     <div className="radio">
-      //       <lable>
-      //         <input type="radio" value= "level3"
-      //           checked={this.state.level === "level3"}
-      //           onChange={this.handleLevelChange} />
-      //         "3"
-      //       </lable>
-      //     </div>
-      //   </form>
-      // </div>
       <div id="inputs" className="inputs">
         <button id="start" >Start</button>
         <div className="div"><h1>main</h1></div>

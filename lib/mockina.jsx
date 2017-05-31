@@ -23,8 +23,9 @@ document.addEventListener("DOMContentLoaded", () => {
   canvasEl.width = 600;
   canvasEl.height = 400;
   const board = new Board(ctx);
+  const level = new HowTo();
   board.render();
-  const xmockina = new XMockina(ctx, board);
+  const xmockina = new XMockina(ctx, board, level);
   const movement = new Movement(xmockina);
   xmockina.render();
 

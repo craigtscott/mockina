@@ -7,13 +7,22 @@ class HowTo extends React.Component {
     super();
 
     this.state = {
-    modalIsOpen: false
+      modalIsOpen: false,
+      level: "level1"
     };
 
     this.openModal = this.openModal.bind(this);
     this.afterOpenModal = this.afterOpenModal.bind(this);
     this.closeModal = this.closeModal.bind(this);
+    this.handleLevelChange = this.handleLevelChange.bind(this);
+
+  };
+
+  handleLevelChange(changeEvent){
+    this.setState({level: changeEvent.target.value});
+    console.log(this.state.level);
   }
+
 
   openModal() {
     this.setState({modalIsOpen: true});
@@ -31,6 +40,42 @@ class HowTo extends React.Component {
       return (
         <div id="howto">
           <div>
+            <div id="levels" className="levels">
+              <form>
+                <div className="radio">
+                  <lable>
+                    <input type="radio" value= "level1"
+                      checked={this.state.level === "level1"}
+                      onChange={this.handleLevelChange} />
+                    1
+                  </lable>
+                </div>
+                <div className="radio">
+                  <lable>
+                    <input type="radio" value= "level2"
+                      checked={this.state.level === "level2"}
+                      onChange={this.handleLevelChange} />
+                    2
+                  </lable>
+                </div>
+                <div className="radio">
+                  <lable>
+                    <input type="radio" value= "level3"
+                      checked={this.state.level === "level3"}
+                      onChange={this.handleLevelChange} />
+                    3
+                  </lable>
+                </div>
+                <div className="radio">
+                  <lable>
+                    <input type="radio" value= "demo"
+                      checked={this.state.level === "demo"}
+                      onChange={this.handleLevelChange} />
+                    demo
+                  </lable>
+                </div>
+              </form>
+            </div>
           </div>
           <button onClick={this.openModal}>How to Play</button>
           <Modal

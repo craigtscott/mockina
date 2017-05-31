@@ -1,41 +1,43 @@
 
 class XMockina {
-  constructor(ctx, board) {
-    this.ctx = ctx;
-    this.board = board;
-    this.currentPositionStart = [150,50];
-    this.nextPositionStart = [150,50];
-    this.directionStart = 1;
-    this.batteryStart = [ [200,50],
-                          [250, 50],
-                          [250, 100],
-                          [250, 150],
-                          [250, 200],
-                          [300, 250],
-                          [350, 250],
-                          [400, 250],
-                          [450, 200],
-                          [450, 150],
-                          [450, 100],
-                          [50, 150],
-                          [0, 300],
-                          [100, 200],
-                          [200, 200],
-                          [200, 150],
-                          [200, 300],
-                          [200, 350],
-                          [300, 150],
-                          [350, 200],
-                          [400, 200],
-                          [350, 0],
-                          [400, 0],
-                          [450, 300],
-                          [500, 350]
-                        ];
+  constructor(ctx, board, level) {
+    debugger;
+      this.ctx = ctx;
+      this.board = board;
+      this.level = level;
+      this.currentPositionStart = [150,50];
+      this.nextPositionStart = [150,50];
+      this.directionStart = 1;
+      this.batteryStart = [ [200,50],
+      [250, 50],
+      [250, 100],
+      [250, 150],
+      [250, 200],
+      [300, 250],
+      [350, 250],
+      [400, 250],
+      [450, 200],
+      [450, 150],
+      [450, 100],
+      [50, 150],
+      [0, 300],
+      [100, 200],
+      [200, 200],
+      [200, 150],
+      [200, 300],
+      [200, 350],
+      [300, 150],
+      [350, 200],
+      [400, 200],
+      [350, 0],
+      [400, 0],
+      [450, 300],
+      [500, 350]
+    ];
     this.count = 0;
     this.winCount = 8;
     this.resetGame();
-  }
+    }
 
   resetGame(){
     this.battery = [].concat(this.batteryStart);
@@ -47,6 +49,7 @@ class XMockina {
   }
 
   render() {
+    debugger;
     let ctx = this.ctx;
     let oldX = this.currentPosition[0];
     let oldY = this.currentPosition[1];
