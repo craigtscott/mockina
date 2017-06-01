@@ -1,21 +1,23 @@
 
-class XMockina {
-  constructor(ctx, board, level) {
-      this.ctx = ctx;
-      this.board = board;
-      this.level = level;
-      this.currentPositionStart = [];
-      this.nextPositionStart = [];
-      this.directionStart = 1;
-      this.batteryStart = [];
+
+class XMockina  {
+  constructor(ctx, board, level, theLevel) {
+    this.ctx = ctx;
+    this.board = board;
+    this.level = level;
+    this.theLevel = theLevel;
+    this.currentPositionStart = [];
+    this.nextPositionStart = [];
+    this.directionStart = 1;
+    this.batteryStart = [];
     this.count = 0;
     this.winCount = 0;
-    this.getLevel();
     this.resetGame();
     }
 
 
   resetGame(){
+    this.getLevel();
     this.battery = [].concat(this.batteryStart);
     this.currentPosition = this.currentPositionStart;
     this.nextPosition = this.nextPositionStart;
@@ -26,22 +28,24 @@ class XMockina {
 
   getLevel(){
     debugger;
-    switch(this.level.state.level){
+    // switch(this.level.state.level){
+    switch(this.theLevel){
       case "1":
         this.currentPositionStart = [150,100];
         this.nextPositionStart = [150,100];
         this.batteryStart = [[300, 100]];
         this.winCount = 1;
-        debugger;
         break;
       case "2":
         this.currentPositionStart = [150,300];
         this.nextPositionStart = [150,300];
         this.batteryStart = [[300, 300]];
         this.count = 1;
+        debugger;
         break;
     }
   }
+
 
   render() {
     let ctx = this.ctx;
@@ -49,10 +53,8 @@ class XMockina {
     let oldY = this.currentPosition[1];
     ctx.clearRect(0,0 , 400, 600);
     ctx.clearRect(oldX, oldY,  50,  50);
-    debugger;
-    this.getLevel();
     this.board.render();
-    debugger;
+    console.log(this.level.state.level);
     for (let i = 0; i < this.battery.length; i++) {
       let xPos = this.battery[i][0];
       let yPos = this.battery[i][1];
@@ -81,12 +83,9 @@ class XMockina {
   turn(num) {
     console.log("turn");
     if (num) {
-      // console.log(this.direction);
       this.direction = (this.direction += num);
-      // console.log(this.direction);
       this.direction = (this.direction % 4);
       if (this.direction < 0){ this.direction += 4;}
-      // console.log(this.direction);
       this.render();
     }
 

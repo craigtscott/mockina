@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Inputs from './inputs';
-import Levels from './level';
 import HowTo from './howto';
 import Name from './name';
 const Movement  = require("./movement");
@@ -22,14 +21,23 @@ document.addEventListener("DOMContentLoaded", () => {
   const ctx = canvasEl.getContext("2d");
   canvasEl.width = 600;
   canvasEl.height = 400;
-  const board = new Board(ctx);
-  const level = new HowTo();
+  let board = new Board(ctx);
+  let level = new HowTo(board);
+  let theLevel = "1";
   board.render();
-  const xmockina = new XMockina(ctx, board, level);
-  const movement = new Movement(xmockina);
+  let xmockina = new XMockina(ctx, board, level, theLevel);
+  let movement = new Movement(xmockina);
   xmockina.render();
-
-
-
+  var levels = document.getElementById("levels");
+  levels.addEventListener("change", (event) => {
+    debugger;
+    theLevel = event.target.value;
+    board = new Board(ctx);
+    level = new HowTo(board);
+    board.render();
+    xmockina = new XMockina(ctx, board, level, theLevel);
+    movement = new Movement(xmockina);
+    xmockina.render();
+  });
 }
 );

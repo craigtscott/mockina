@@ -2,6 +2,7 @@ import React from 'react';
 import Modal from 'react-modal';
 
 
+
 class HowTo extends React.Component {
   constructor(){
     super();
@@ -19,7 +20,9 @@ class HowTo extends React.Component {
   };
 
   handleLevelChange(changeEvent){
+    debugger;
     this.setState({level: changeEvent.target.value});
+    debugger;
   }
 
 
@@ -39,6 +42,7 @@ class HowTo extends React.Component {
       return (
         <div id="howto">
           <div>
+            <div id="test">{this.state.level}</div>
             <div id="levels" className="levels">
               <form>
                 <div className="radio">
