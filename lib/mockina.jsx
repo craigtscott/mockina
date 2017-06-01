@@ -22,20 +22,17 @@ document.addEventListener("DOMContentLoaded", () => {
   canvasEl.width = 600;
   canvasEl.height = 400;
   let board = new Board(ctx);
-  let level = new HowTo(board);
   let theLevel = "1";
   board.render();
-  let xmockina = new XMockina(ctx, board, level, theLevel);
+  let xmockina = new XMockina(ctx, board, theLevel);
   let movement = new Movement(xmockina);
   xmockina.render();
   var levels = document.getElementById("levels");
   levels.addEventListener("change", (event) => {
-    debugger;
     theLevel = event.target.value;
     board = new Board(ctx);
-    level = new HowTo(board);
     board.render();
-    xmockina = new XMockina(ctx, board, level, theLevel);
+    xmockina = new XMockina(ctx, board, theLevel);
     movement = new Movement(xmockina);
     xmockina.render();
   });

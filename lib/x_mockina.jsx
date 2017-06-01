@@ -1,10 +1,9 @@
 
 
 class XMockina  {
-  constructor(ctx, board, level, theLevel) {
+  constructor(ctx, board, theLevel) {
     this.ctx = ctx;
     this.board = board;
-    this.level = level;
     this.theLevel = theLevel;
     this.currentPositionStart = [];
     this.nextPositionStart = [];
@@ -27,8 +26,6 @@ class XMockina  {
   }
 
   getLevel(){
-    debugger;
-    // switch(this.level.state.level){
     switch(this.theLevel){
       case "1":
         this.currentPositionStart = [150,100];
@@ -39,9 +36,26 @@ class XMockina  {
       case "2":
         this.currentPositionStart = [150,300];
         this.nextPositionStart = [150,300];
+        this.batteryStart = [[300, 300], [300, 200]];
+        this.count = 2;
+        break;
+      case "3":
+        this.currentPositionStart = [150,300];
+        this.nextPositionStart = [150,300];
         this.batteryStart = [[300, 300]];
         this.count = 1;
-        debugger;
+        break;
+      case "4":
+        this.currentPositionStart = [150,50];
+        this.nextPositionStart = [150,50];
+        this.batteryStart = [ [200, 50 ], [250, 50], [250, 100], [250, 150],
+                              [250, 200],[300, 250], [350, 250], [400, 250],
+                              [450, 200], [450, 150], [450, 100], [50, 150],
+                              [0, 300], [100, 200], [200, 200], [200, 150],
+                              [200, 300], [200, 350], [300, 150], [350, 200],
+                              [400, 200], [350, 0], [400, 0],[450, 300],
+                              [500, 350]];
+        this.count = 8;
         break;
     }
   }
@@ -54,7 +68,6 @@ class XMockina  {
     ctx.clearRect(0,0 , 400, 600);
     ctx.clearRect(oldX, oldY,  50,  50);
     this.board.render();
-    console.log(this.level.state.level);
     for (let i = 0; i < this.battery.length; i++) {
       let xPos = this.battery[i][0];
       let yPos = this.battery[i][1];

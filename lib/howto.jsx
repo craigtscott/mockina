@@ -20,9 +20,7 @@ class HowTo extends React.Component {
   };
 
   handleLevelChange(changeEvent){
-    debugger;
     this.setState({level: changeEvent.target.value});
-    debugger;
   }
 
 
@@ -42,44 +40,47 @@ class HowTo extends React.Component {
       return (
         <div id="howto">
           <div>
-            <div id="test">{this.state.level}</div>
-            <div id="levels" className="levels">
-              <form>
-                <div className="radio">
-                  <lable>
-                    <input type="radio" value= "1"
-                      checked={this.state.level === "1"}
-                      onChange={this.handleLevelChange} />
-                    1
-                  </lable>
-                </div>
-                <div className="radio">
-                  <lable>
-                    <input type="radio" value= "2"
-                      checked={this.state.level === "2"}
-                      onChange={this.handleLevelChange} />
-                    2
-                  </lable>
-                </div>
-                <div className="radio">
-                  <lable>
-                    <input type="radio" value= "3"
-                      checked={this.state.level === "3"}
-                      onChange={this.handleLevelChange} />
-                    3
-                  </lable>
-                </div>
-                <div className="radio">
-                  <lable>
-                    <input type="radio" value= "4"
-                      checked={this.state.level === "4"}
-                      onChange={this.handleLevelChange} />
-                    demo
-                  </lable>
-                </div>
-              </form>
+            <div id="test" hidden="true">{this.state.level}</div>
+            <div >
+              <div id="levels" >
+                <h3>Levels</h3>
+                <form className="levelsForm">
+                  <div className="radio">
+                    <lable>
+                      <input type="radio" value= "1"
+                        checked={this.state.level === "1"}
+                        onChange={this.handleLevelChange} />
+                      1
+                    </lable>
+                  </div>
+                  <div className="radio">
+                    <lable>
+                      <input type="radio" value= "2"
+                        checked={this.state.level === "2"}
+                        onChange={this.handleLevelChange} />
+                      2
+                    </lable>
+                  </div>
+                  <div className="radio">
+                    <lable>
+                      <input type="radio" value= "3"
+                        checked={this.state.level === "3"}
+                        onChange={this.handleLevelChange} />
+                      3
+                    </lable>
+                  </div>
+                  <div className="radio">
+                    <lable>
+                      <input type="radio" value= "4"
+                        checked={this.state.level === "4"}
+                        onChange={this.handleLevelChange} />
+                      4
+                    </lable>
+                  </div>
+                </form>
+              </div>
             </div>
-          </div>
+            </div>
           <button onClick={this.openModal}>How to Play</button>
           <Modal
             isOpen={this.state.modalIsOpen}
