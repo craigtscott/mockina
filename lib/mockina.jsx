@@ -5,7 +5,6 @@ import HowTo from './howto';
 import Name from './name';
 import XMockina from './x_mockina';
 const Movement  = require("./movement");
-// const XMockina  = require("./x_mockina");
 const Board = require("./board");
 
 
@@ -25,26 +24,30 @@ document.addEventListener("DOMContentLoaded", () => {
   let board = new Board(ctx);
   let theLevel = "1";
   board.render();
-  let xmockina = new XMockina(ctx, board, theLevel);
   let inputs = new Inputs();
+  let xmockina = new XMockina(ctx, board, theLevel, inputs);
   let movement = new Movement(xmockina, inputs);
   xmockina.setGame();
-  var levels = document.getElementById("levels");
+
+  document.getElementById("Start").addEventListener("click", () => {
+      movement.buildMoves();
+  });
+
+  let levels = document.getElementById("levels");
   levels.addEventListener("change", (event) => {
     theLevel = event.target.value;
     board = new Board(ctx);
     board.render();
-    xmockina = new XMockina(ctx, board, theLevel);
+    xmockina = new XMockina(ctx, board, theLevel, inputs);
     movement = new Movement(xmockina);
     xmockina.setGame();
   });
+
   let reset = document.getElementById("Reset");
   reset.addEventListener("click", (event) => {
-    debugger;
-    // theLevel = event.target.value;
     board = new Board(ctx);
     board.render();
-    xmockina = new XMockina(ctx, board, theLevel);
+    xmockina = new XMockina(ctx, board, theLevel, inputs);
     movement = new Movement(xmockina);
     xmockina.setGame();
   });

@@ -1,25 +1,27 @@
 import React from 'react';
 
 class Inputs extends React.Component {
-  constructor(){
+  constructor(bool=false){
     super();
 
     this.state = {
-      button: "Start",
+      startHidden: false,
+      resetHidden: true,
+
     };
 
     this.demo = this.demo.bind(this);
     };
 
-  updateTitle(){
-    this.setState({button: "Reset"});
-    debugger;
-    // if (this.state.button === "Start"){
-    //   debugger;
-    //   this.setState({button: "Reset"});
-    //   debugger;
-    // }
-  }
+    swapButtons(){
+      console.log(this.state.startHidden);
+      this.setState({
+        startHidden: true,
+      });
+      console.log(this.state.startHidden);
+      alert("should");
+
+    }
 
 
   demo() {
@@ -59,9 +61,8 @@ class Inputs extends React.Component {
   render(){
     return(
       <div id="inputs" className="inputs">
-        <button id={this.state.button} >{this.state.button}</button>
-        <button id="Reset">Reset</button>
-        <div className="div"><h1>main</h1></div>
+        <script>debugger;</script>
+        <button id="Start" hidden={this.state.startHidden}>Start</button>        <div className="div"><h1>main</h1></div>
         <div className="moves">
           <select  id="move0" className="move0">
               <option value="wait" >wait</option>
@@ -187,7 +188,8 @@ class Inputs extends React.Component {
               <option value="pick" >pick up</option>
           </select>
         </div>
-        <button onClick={this.demo} id="demo">Demo</button>
+        <button id="Reset" >Reset</button>
+        <button onClick={this.demo} hidden={this.state.resetHidden}id="demo">Demo</button>
       </div>
 );}
 

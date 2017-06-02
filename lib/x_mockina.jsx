@@ -1,10 +1,9 @@
-
-
 class XMockina  {
-  constructor(ctx, board, theLevel) {
+  constructor(ctx, board, theLevel, inputs) {
     this.ctx = ctx;
     this.board = board;
     this.theLevel = theLevel;
+    this.inputs = inputs;
     this.currentPositionStart = [];
     this.nextPositionStart = [];
     this.directionStart = 1;
@@ -16,7 +15,6 @@ class XMockina  {
     }
 
   setGame(){
-    debugger;
     this.setLevel();
     this.currentPosition = this.currentPositionStart;
     this.nextPosition = this.nextPositionStart;
@@ -25,9 +23,7 @@ class XMockina  {
     this.render();
   }
   resetGame(){
-    debugger;
     this.setLevel();
-    debugger;
     this.currentPosition = this.currentPositionStart;
     this.nextPosition = this.nextPositionStart;
     this.direction = this.directionStart;
@@ -94,7 +90,6 @@ class XMockina  {
 
 
   render() {
-    debugger;
     console.log(this.theLevel);
       let ctx = this.ctx;
       let oldX = this.currentPosition[0];

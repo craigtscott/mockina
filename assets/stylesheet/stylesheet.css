@@ -61,7 +61,8 @@ p {
 
 .three {
   height: 100%;
-    width: 33%;
+  width: 33%;
+  z-index: -5; 
 }
 
 .name{
@@ -139,6 +140,13 @@ button {
   background-color: green;
   margin: 10px;
 }
+/*#Start{
+  display: block;
+}
+
+#Reset{
+  display: block;
+}*/
 
 .fa {
   transform: rotate(-90deg);
