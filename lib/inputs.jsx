@@ -5,10 +5,22 @@ class Inputs extends React.Component {
     super();
 
     this.state = {
+      button: "Start",
     };
 
     this.demo = this.demo.bind(this);
     };
+
+  updateTitle(){
+    this.setState({button: "Reset"});
+    debugger;
+    // if (this.state.button === "Start"){
+    //   debugger;
+    //   this.setState({button: "Reset"});
+    //   debugger;
+    // }
+  }
+
 
   demo() {
     let element0 = document.getElementById('move0');
@@ -47,7 +59,8 @@ class Inputs extends React.Component {
   render(){
     return(
       <div id="inputs" className="inputs">
-        <button id="start" >Start</button>
+        <button id={this.state.button} >{this.state.button}</button>
+        <button id="Reset">Reset</button>
         <div className="div"><h1>main</h1></div>
         <div className="moves">
           <select  id="move0" className="move0">

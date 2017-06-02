@@ -9,79 +9,113 @@ class XMockina  {
     this.nextPositionStart = [];
     this.directionStart = 1;
     this.batteryStart = [];
+    this.battery = [];
     this.count = 0;
-    this.winCount = 0;
-    this.resetGame();
+    this.winCount = 100;
+    this.renderCount = 0;
     }
 
-
-  resetGame(){
-    this.getLevel();
-    this.battery = [].concat(this.batteryStart);
+  setGame(){
+    debugger;
+    this.setLevel();
     this.currentPosition = this.currentPositionStart;
     this.nextPosition = this.nextPositionStart;
     this.direction = this.directionStart;
     this.count = 0;
     this.render();
   }
+  resetGame(){
+    debugger;
+    this.setLevel();
+    debugger;
+    this.currentPosition = this.currentPositionStart;
+    this.nextPosition = this.nextPositionStart;
+    this.direction = this.directionStart;
+    this.count = 0;
+    this.render();
 
-  getLevel(){
+  }
+
+  resetPos() {
+    this.currentPositionStart = [];
+    this.nextPositionStart = [];
+    this.directionStart = 1;
+    this.batteryStart = [];
+    this.battery = [];
+    this.count = 0;
+    this.winCount = 1000;
+  }
+
+  setLevel(bool){
     switch(this.theLevel){
+      case "0":
+        this.currentPositionStart = [];
+        this.nextPositionStart = [];
+        this.battery = [];
+        this.directionStart = 1;
+        this.winCount = 1;
+        break;
       case "1":
         this.currentPositionStart = [150,100];
         this.nextPositionStart = [150,100];
-        this.batteryStart = [[300, 100]];
+        this.battery = [[300, 100]];
+        this.directionStart = 1;
         this.winCount = 1;
         break;
       case "2":
         this.currentPositionStart = [150,300];
         this.nextPositionStart = [150,300];
-        this.batteryStart = [[300, 300], [300, 200]];
-        this.count = 2;
+        this.battery = [[300, 300], [300, 200]];
+        this.directionStart = 1;
+        this.wincount = 2;
         break;
       case "3":
         this.currentPositionStart = [150,300];
         this.nextPositionStart = [150,300];
-        this.batteryStart = [[300, 300]];
-        this.count = 1;
+        this.battery = [[300, 300]];
+        this.directionStart = 1;
+        this.wincount = 1;
         break;
       case "4":
         this.currentPositionStart = [150,50];
         this.nextPositionStart = [150,50];
-        this.batteryStart = [ [200, 50 ], [250, 50], [250, 100], [250, 150],
+        this.battery = [ [200, 50 ], [250, 50], [250, 100], [250, 150],
                               [250, 200],[300, 250], [350, 250], [400, 250],
                               [450, 200], [450, 150], [450, 100], [50, 150],
                               [0, 300], [100, 200], [200, 200], [200, 150],
                               [200, 300], [200, 350], [300, 150], [350, 200],
                               [400, 200], [350, 0], [400, 0],[450, 300],
                               [500, 350]];
-        this.count = 8;
+                              this.directionStart = 1;
+        this.wincount = 8;
         break;
     }
   }
 
 
   render() {
-    let ctx = this.ctx;
-    let oldX = this.currentPosition[0];
-    let oldY = this.currentPosition[1];
-    ctx.clearRect(0,0 , 400, 600);
-    ctx.clearRect(oldX, oldY,  50,  50);
-    this.board.render();
-    for (let i = 0; i < this.battery.length; i++) {
-      let xPos = this.battery[i][0];
-      let yPos = this.battery[i][1];
-      this.renderBattery(xPos, yPos);
-    }
-    const base_image = new Image();
-    let xPos = this.nextPosition[0];
-    let yPos = this.nextPosition[1];
-    let dir = this.direction;
-    base_image.src = `assets/robot_${dir}.png`;
-    base_image.onload = function(){
-      ctx.drawImage(base_image, xPos, yPos);
-    };
-    this.currentPosition = [xPos, yPos];
+    debugger;
+    console.log(this.theLevel);
+      let ctx = this.ctx;
+      let oldX = this.currentPosition[0];
+      let oldY = this.currentPosition[1];
+      ctx.clearRect(0,0 , 400, 600);
+      ctx.clearRect(oldX, oldY,  50,  50);
+      this.board.render();
+      for (let i = 0; i < this.battery.length; i++) {
+        let xPos = this.battery[i][0];
+        let yPos = this.battery[i][1];
+        this.renderBattery(xPos, yPos);
+      }
+      const base_image = new Image();
+      let xPos = this.nextPosition[0];
+      let yPos = this.nextPosition[1];
+      let dir = this.direction;
+      base_image.src = `assets/robot_${dir}.png`;
+      base_image.onload = function(){
+        ctx.drawImage(base_image, xPos, yPos);
+      };
+      this.currentPosition = [xPos, yPos];
   }
 
   renderBattery (xPos, yPos) {
@@ -118,7 +152,6 @@ class XMockina  {
 
   win() {
     this.board.render();
-
     let ctx = this.ctx;
     ctx.font="100px VT323";
     // Create gradient
@@ -145,8 +178,6 @@ class XMockina  {
     if ((this.direction === 1) && (this.currentPosition[0] + 50) <= 550 ){ this.nextPosition = [(this.currentPosition[0] + 50), this.currentPosition[1]]; };
     if ((this.direction === 2) && (this.currentPosition[1] + 50) <= 350) { this.nextPosition = [this.currentPosition[0], (this.currentPosition[1] + 50)]; };
     if ((this.direction === 3) && (this.currentPosition[0] - 50) >= 0) { this.nextPosition = [(this.currentPosition[0] - 50), this.currentPosition[1]]; };
-
-    // console.log(this.currentPosition);
     this.render();
   };
 
