@@ -36,7 +36,7 @@ class HowTo extends React.Component {
 
   afterOpenModal() {
     // references are now sync'd and can be accessed.
-    this.subtitle.style.color = '#f00';
+    // this.subtitle.style.color = '#f00';
   }
 
   closeModal() {
@@ -94,14 +94,23 @@ class HowTo extends React.Component {
           <button onClick={this.openModal}>How to Play</button>
           <Modal
             isOpen={this.state.modalIsOpen}
-            onAfterOpen={this.afterOpenModal}
             onRequestClose={this.closeModal}
-            contentLabel="Example Modal"
+            contentLabel="How to Modal"
+            className="modal"
           >
-          <p> Make the robot pick up 8 or more batteries </p>
-          <p> You can run a subroutine from the main </p>
-          <p> Protip dont forget to pick up </p>
-          <p> Press demo to get one of the solutions </p>
+          <div className="modalDiv">
+            <h3> How To Play</h3>
+            <p> Preprogram the robot's commands from the drop down menue to </p>
+            <p> make the robot pick up the desired amount of battires. The </p>
+            <p> drop downs labled main each represent one movment command.</p>
+            <p> You can also run a subroutine from the main making each main</p>
+            <p> into 8 more movments. </p>
+            <p> Protip dont forget to make make the robot pick up the battries.</p>
+          </div>
+          <div className='closeDiv'>
+            <button className="close" onClick={this.closeModal}>Close</button>
+          </div>
+
           </Modal>
         </div>
 

@@ -73,14 +73,14 @@ class XMockina  {
         this.nextPositionStart = [150,300];
         this.battery = [[300, 300], [300, 200]];
         this.directionStart = 1;
-        this.wincount = 2;
+        this.winCount = 2;
         break;
       case "3":
         this.currentPositionStart = [150,300];
         this.nextPositionStart = [150,300];
         this.battery = [[300, 300], [400, 300], [400, 200]];
         this.directionStart = 1;
-        this.wincount = 3;
+        this.winCount = 3;
         break;
       case "4":
         this.currentPositionStart = [150,50];
@@ -93,7 +93,7 @@ class XMockina  {
                               [400, 200], [350, 0], [400, 0],[450, 300],
                               [500, 350]];
                               this.directionStart = 1;
-        this.wincount = 8;
+        this.winCount = 8;
         break;
     }
   }

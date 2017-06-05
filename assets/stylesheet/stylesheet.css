@@ -166,3 +166,26 @@ button {
   height: 50px;
   padding-left: 5px;
 }
+
+.modal {
+  height: 390px;
+  width: 500px;
+  position: absolute;
+  left: 25%;
+  top: 25%;
+  border: red 5px solid;
+  background-color: red;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.modalDiv{
+  padding-left: 20px;
+}
+.closeDiv{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
