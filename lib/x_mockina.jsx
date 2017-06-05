@@ -32,6 +32,12 @@ class XMockina  {
 
   }
 
+  componentDidLoad(){
+    inputs.setCount(this.winCount);
+  }
+
+
+
   resetPos() {
     this.currentPositionStart = [];
     this.nextPositionStart = [];
@@ -40,6 +46,10 @@ class XMockina  {
     this.battery = [];
     this.count = 0;
     this.winCount = 1000;
+  }
+
+  getWinCount() {
+    return(this.winCount);
   }
 
   setLevel(bool){
@@ -68,9 +78,9 @@ class XMockina  {
       case "3":
         this.currentPositionStart = [150,300];
         this.nextPositionStart = [150,300];
-        this.battery = [[300, 300]];
+        this.battery = [[300, 300], [400, 300], [400, 200]];
         this.directionStart = 1;
-        this.wincount = 1;
+        this.wincount = 3;
         break;
       case "4":
         this.currentPositionStart = [150,50];

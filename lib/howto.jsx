@@ -1,17 +1,18 @@
 import React from 'react';
 import Modal from 'react-modal';
+import XMockina from './x_mockina';
 
 
 
 class HowTo extends React.Component {
-  constructor(){
-    super();
+  constructor(XMockina){
+    super(XMockina);
 
     this.state = {
       modalIsOpen: false,
-      level: "1"
+      level: "1",
+      winCount: "1",
     };
-
     this.openModal = this.openModal.bind(this);
     this.afterOpenModal = this.afterOpenModal.bind(this);
     this.closeModal = this.closeModal.bind(this);
@@ -21,6 +22,11 @@ class HowTo extends React.Component {
 
   handleLevelChange(changeEvent){
     this.setState({level: changeEvent.target.value});
+    if (changeEvent.target.value < 4){
+      this.setState({winCount: changeEvent.target.value});
+    } else {
+      this.setState({winCount: 8});
+    }
   }
 
 
@@ -78,6 +84,10 @@ class HowTo extends React.Component {
                     </lable>
                   </div>
                 </form>
+                <div className="pickUp">
+                  <h3>Pick up {this.state.winCount} </h3>
+                  <img className="battery" src="././assets/battery.png" />
+                </div>
               </div>
             </div>
             </div>

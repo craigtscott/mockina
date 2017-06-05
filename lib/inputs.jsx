@@ -23,7 +23,6 @@ class Inputs extends React.Component {
 
     }
 
-
   demo() {
     let element0 = document.getElementById('move0');
     element0.value = "move";
@@ -61,8 +60,8 @@ class Inputs extends React.Component {
   render(){
     return(
       <div id="inputs" className="inputs">
-        <script>debugger;</script>
-        <button id="Start" hidden={this.state.startHidden}>Start</button>        <div className="div"><h1>main</h1></div>
+        <button id="Start" hidden={this.state.startHidden}>Start</button>
+          <div className="div"><h1>main</h1></div>
         <div className="moves">
           <select  id="move0" className="move0">
               <option value="wait" >wait</option>

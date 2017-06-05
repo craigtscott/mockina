@@ -62,7 +62,7 @@ p {
 .three {
   height: 100%;
   width: 33%;
-  z-index: -5; 
+  z-index: -5;
 }
 
 .name{
@@ -155,4 +155,14 @@ button {
 .levelsForm {
   display: flex;
   margin-top: -22px;
+}
+
+.pickUp {
+  display: flex;
+  align-items: center;
+}
+
+.battery {
+  height: 50px;
+  padding-left: 5px;
 }
